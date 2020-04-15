@@ -1,0 +1,67 @@
+.photos__list {
+  margin: 0;
+  padding: 0;
+}
+.photos__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  list-style: none;
+  margin: 22px 20px;
+  padding: 0;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: 0;
+    width: 320px;
+    margin-left: -20px;
+    background-color: #333333;
+    opacity: 0.1;
+    z-index: 1;
+  }
+}
+.photos__img {
+  margin-bottom: 15px;
+}
+.photos__title {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.photos__creator {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+.photos__like-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+  margin-bottom: 21px;
+}
+.photos__button-like {
+  display: block;
+  width: 23px;
+  height: 21px;
+  background-image: url("../../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 21px;
+  background-color: transparent;
+  border-style: none;
+  opacity: 0.3;
+
+}
+.photos__like-total {
+  display: block;
+  margin-top: 12px;
+  margin-left: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.24px;
+}

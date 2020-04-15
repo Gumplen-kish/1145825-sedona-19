@@ -12,27 +12,40 @@
   padding-top: 31px;
   padding-right: 93px;
   text-align: center;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1.24;
   font-size: 21px;
   text-decoration: none;
   color: #000000;
 }
 .page-footer__social {
-  padding-top: 41px;
+  padding-top: 61px;
 }
 .page-footer__copyright {
-  padding-top: 51px;
+  padding-top: 45px;
+}
+.copyright {
+  position: relative;
+  content: "";
 }
 .copyright__text {
+  padding-right: 40px;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
   text-align: center;
   padding-bottom: 35px;
 }
-.copyright__link {
-  content: url(../../img/logo-htmlacademy.svg);
-  padding-left: 11px;
+.copyright__link::after {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: 102px;
+  display: block;
+  width: 27px;
+  height: 34px;
+  background-image: url("../../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
 }

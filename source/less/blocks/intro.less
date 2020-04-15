@@ -1,0 +1,33 @@
+.intro {
+  position: relative;
+  display: block;
+  min-width: 269px;
+  min-height: 200px;
+  margin: 0;
+  padding: 44px 24px 33px 27px;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #333333;
+    opacity: 0.1;
+    z-index: 1;
+  }
+}
+.intro__title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+.intro__text {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  line-height: 24px;
+}

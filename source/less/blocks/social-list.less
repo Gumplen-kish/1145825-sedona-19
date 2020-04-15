@@ -19,16 +19,37 @@
   padding: 0;
   margin: 0;
   background-color: @light-blue;
-  &--twitter {
-    position: relative;
-    content: url(../../img/icon-twitter.svg);
+  &--twitter::after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    left: 13px;
+    display: block;
+    width: 18px;
+    height: 14px;
+    background-image: url("../../img/icon-twitter.svg");
+    background-repeat: no-repeat;
   }
-  &--facebook {
-    position: relative;
-    content: url(../../img/icon-facebook.svg);
+  &--facebook::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: 18px;
+    display: block;
+    width: 9px;
+    height: 18px;
+    background-image: url("../../img/icon-facebook.svg");
+    background-repeat: no-repeat;
   }
-  &--youtube {
-    position: relative;
-    content: url(../../img/icon-youtube.svg);
+  &--youtube::after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    left: 13px;
+    display: block;
+    width: 20px;
+    height: 14px;
+    background-image: url("../../img/icon-youtube.svg");
+    background-repeat: no-repeat;
   }
 }
