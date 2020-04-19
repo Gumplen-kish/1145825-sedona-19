@@ -18,6 +18,7 @@
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
+  color: #333333;
 }
 .interested__link {
   .button-interested-style();
@@ -27,4 +28,32 @@
   &:active {
     .button-active();
   }
+}
+@media (min-width: @tablet-width) {
+  .interested {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .interested__title {
+    padding-top: 36px;
+    padding-bottom: 32px;
+    font-size: 30px;
+    line-height: 26px;
+    letter-spacing: 0.24px;
+  }
+  .interested__text {
+    padding-bottom: 42px;
+    line-height: 1.71;
+  }
+  .interested__link {
+    width: 458px;
+    margin-top: 1px;
+    padding-right: 47px;
+    padding-top: 16px;
+    margin-bottom: 58px;
+  }
+
 }

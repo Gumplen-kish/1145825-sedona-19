@@ -13,3 +13,40 @@
     .button-active();
   }
 }
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .site-list__link {
+    width: 153px;
+    height: 56px;
+    font-size: 14px;
+    line-height: 26px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    &:hover {
+      background-color: #ffffff;
+      color: #81b3d2;
+    }
+    &:active {
+      background-color: #ffffff;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .site-list__item--active a {
+    color: #766357;
+    &:hover {
+      color: #604e43;
+    }
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
+  }
+  .site-list__item {
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+}

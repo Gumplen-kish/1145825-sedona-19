@@ -67,4 +67,67 @@
   color: #333333;
   line-height: 1.5;
 }
+@media (min-width: @tablet-width) {
+  .subitems__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .subitems__item {
+    display: flex;
+    width: 165px;
+    padding-top: 149px;
+    padding-bottom: 59px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &--housing::before {
+      top: 51px;
+      left: 44px;
+      display: block;
+      width: 75px;
+      height: 72px;
+      object-fit: contain;
+      background-size: 75px 72px;
+    }
+    &--food::before {
+      top: 54px;
+      left: 43px;
+      display: block;
+      width: 77px;
+      height: 68px;
+      object-fit: contain;
+      background-size: 77px 68px;
+    }
+    &--souvenirs::before {
+      top: 48px;
+      left: 49px;
+      display: block;
+      width: 64px;
+      height: 75px;
+      object-fit: contain;
+      background-size: 64px 75px;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+  .subitems__title {
+    text-align: center;
+    padding-bottom: 22px;
+    font-size: 21px;
+  }
+  .subitems__description {
+    width: 166px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+}
 

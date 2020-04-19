@@ -65,3 +65,29 @@
   font-weight: bold;
   line-height: 1.24px;
 }
+@media (min-width: @tablet-width) {
+  .photos__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+  }
+  .photos__item {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 267px;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    &::after {
+      display: none;
+    }
+    &:first-child {
+      width: 648px;
+      height: 400px;
+
+    }
+  }
+}

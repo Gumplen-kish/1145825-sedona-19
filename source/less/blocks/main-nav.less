@@ -74,6 +74,15 @@
   padding: 0;
   list-style: none;
 }
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+}
 /*@media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
@@ -134,17 +143,9 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav {
-    width: auto;
-    margin: 0;
+
   }
-  .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 640px;
-    margin: 0 auto;
-  }
+
 }
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {

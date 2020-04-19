@@ -49,3 +49,25 @@
   background-image: url("../../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
 }
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+  }
+  .page-footer__tag {
+    padding-top: 10px;
+  }
+  .page-footer__social {
+    padding-top: 32px;
+    padding-right: 9px;
+  }
+  .page-footer__copyright {
+    display: flex;
+  }
+  .page-footer__text {
+    padding-bottom: 14px;
+  }
+}
