@@ -8,9 +8,6 @@
 .page-footer__tag {
   display: block;
   width: 136px;
-  height: 16px;
-  padding-top: 31px;
-  padding-right: 93px;
   text-align: center;
   font-family: "PTSans", Arial, sans-serif;
   font-weight: bold;
@@ -28,7 +25,6 @@
 }
 .copyright {
   position: relative;
-  content: "";
 }
 .copyright__text {
   padding-right: 40px;
@@ -38,36 +34,43 @@
   text-align: center;
   padding-bottom: 35px;
 }
-.copyright__link::after {
-  position: absolute;
-  content: "";
-  top: 40px;
-  left: 102px;
-  display: block;
+.copyright__link {
   width: 27px;
   height: 34px;
   background-image: url("../../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
+  /*&::after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 102px;
+    display: block;
+    width: 27px;
+    height: 34px;
+  }*/
 }
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
+    align-content: center;
+    min-height: 120px;
     margin: 0;
-    padding: 0;
+    padding-right: 60px;
+    padding-left: 60px;
   }
   .page-footer__tag {
-    padding-top: 10px;
+    padding: 0;
   }
   .page-footer__social {
-    padding-top: 32px;
-    padding-right: 9px;
+    padding: 0;
   }
   .page-footer__copyright {
     display: flex;
+    padding: 0;
   }
   .page-footer__text {
-    padding-bottom: 14px;
+    padding-bottom: 0;
   }
 }

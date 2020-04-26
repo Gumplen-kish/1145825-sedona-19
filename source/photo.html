@@ -35,8 +35,8 @@
         </div>
       </nav>
     </header>
-    <main class="photo-main">
-      <section class="photo-main__wrapper">
+    <main class="main-photo">
+      <section class="main__wrapper">
       </section>
       <section class="intro">
         <h1 class="intro__title">Фото и видео</h1>
@@ -45,41 +45,61 @@
       <section class="photos">
         <h2 class="visually-hidden">Фотографии округа Седоны</h2>
         <ul class="photos__list">
-          <li class="photos__item">
+          <li class="photos__item photos__item--full-width">
             <picture>
-              <source media="(min-width: 1200px;)" srcset="img/photo-sunset-desktop@1x.jpg">
-              <source media="(min-width:768px;)" srcset="img/photo-sunset-tablet@1x.jpg">
-              <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" alt="Дорога и закат" width="280" height="280">
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
+              <img class="photos__img photos__img--full-width" src="img/photo-sunset-mobile@1x.jpg" alt="Дорога и закат" width="280" height="280">
             </picture>
-            <h3 class="photos__title">Неродные просторы</h3>
-            <span class="photos__creator">Автор фото: <span class="photos__creator-name">Борис</span></span>
-            <div class="photos__like-wrapper">
+            <div class="photos__wrapper-text">
+              <h3 class="photos__title">Неродные просторы</h3>
+              <span class="photos__creator">Автор фото: <span class="photos__creator-name">Борис</span></span>
+            </div>
+            <div class="photos__like-wrapper photos__like-wrapper--full-width">
               <button class="photos__button-like" aria-label="Лайк"></button>
               <span class="photos__like-total">1350</span>
             </div>
           </li>
           <li class="photos__item">
-            <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" alt="Красивый кактус" width="280" height="280">
-            <h3 class="photos__title">Местная растительность</h3>
-            <span class="photos__creator">Автор фото: <span class="photos__creator-name">Сергей</span></span>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
+              <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" alt="Красивый кактус" width="280" height="280">
+            </picture>
+            <div class="photos__wrapper-text">
+              <h3 class="photos__title">Местная растительность</h3>
+              <span class="photos__creator">Автор фото: <span class="photos__creator-name">Сергей</span></span>
+            </div>
             <div class="photos__like-wrapper">
               <button class="photos__button-like" aria-label="Лайк"></button>
               <span class="photos__like-total">143</span>
             </div>
           </li>
           <li class="photos__item">
-            <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север с высоты" width="280" height="280">
-            <h3 class="photos__title">Дорога на север</h3>
-            <span class="photos__creator">Автор фото: <span class="photos__creator-name">Петр</span></span>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
+              <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север с высоты" width="280" height="280">
+            </picture>
+            <div class="photos__wrapper-text">
+              <h3 class="photos__title">Дорога на север</h3>
+              <span class="photos__creator">Автор фото: <span class="photos__creator-name">Петр</span></span>
+            </div>
             <div class="photos__like-wrapper">
               <button class="photos__button-like" aria-label="Лайк"></button>
               <span class="photos__like-total">96</span>
             </div>
           </li>
           <li class="photos__item">
-            <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" alt="" width="280" height="280">
-            <h3 class="photos__title">Мост дьявола</h3>
-            <span class="photos__creator">Автор фото: <span class="photos__creator-name">Антон</span></span>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
+              <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" alt="" width="280" height="280">
+            </picture>
+            <div class="photos__wrapper-text">
+              <h3 class="photos__title">Мост дьявола</h3>
+              <span class="photos__creator">Автор фото: <span class="photos__creator-name">Антон</span></span>
+            </div>
             <div class="photos__like-wrapper">
               <button class="photos__button-like" aria-label="Лайк"></button>
               <span class="photos__like-total">254</span>
@@ -87,10 +107,13 @@
           </li>
         </ul>
         <div class="doubt">
-          <h3 class="doubt__title">Вы еще сомневаетесь?</h3>
+          <h3 class="doubt__title">Вce еще сомневаетесь?</h3>
           <p class="doubt__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <video src="#" width="320" height="270" poster="img/video-mobile@1x.jpg" controls>
+        <div class="photos__video">
+          <video src="#" width="320" height="270" poster="img/video-mobile@1x.jpg" controls>
+          </video>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

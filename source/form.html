@@ -25,47 +25,67 @@
               <a class="site-list__link">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <main class="form-main">
-      <section class="form-main__wrapper">
+    <main class="main-form">
+      <section class="main__wrapper">
       </section>
       <section class="feedback">
         <h1 class="feedback__title">Оставьте свой отзыв</h1>
         <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <section class="feedback__form">
+        <h3 class="visually-hidden"> Форма обратного отзыва</h3>
         <form class="feedback__user" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback__user-fieldset">
-            <legend class="feedback__user-title">Представьтесь:</legend>
-            <label class="feedback__user-label" for="user-name">Имя*:</label>
-            <input class="feedback__user-text" type="text" name="user-name" value="Петр" id="user-name" placeholder="Ваше Имя">
-            <label class="feedback__user-label" for="user-surname">Фамилия*:</label>
-            <input class="feedback__user-text" type="text" name="user-surname" value="Иванов" id="user-surname" placeholder="Ваша Фамилия">
-            <label class="feedback__user-label" for="user-patronymic">Отчество:</label>
-            <input class="feedback__user-text" type="text" name="user-patronymic" value="Александрович" id="user-patronymic" placeholder="Ваше Отчество">
+          <fieldset class="feedback__fieldset-represent">
+            <legend class="feedback__user-title feedback__user-represent">Представьтесь:</legend>
+            <ul class="feedback__list-wrapper">
+              <li class="feedback__item">
+                <label class="feedback__user-label feedback__user-name" for="user-name">Имя*:</label>
+                <input class="feedback__user-text" type="text" name="user-name" value="Петр" id="user-name" placeholder="Ваше Имя">
+              </li>
+              <li class="feedback__item">
+                <label class="feedback__user-label feedback__user-surname" for="user-surname">Фамилия*:</label>
+                <input class="feedback__user-text feedback__input-surname" type="text" name="user-surname" value="Иванов" id="user-surname" placeholder="Ваша Фамилия">
+              </li>
+              <li class="feedback__item">
+                <label class="feedback__user-label feedback__user-patronymic" for="user-patronymic">Отчество:</label>
+                <input class="feedback__user-text feedback__input-patronymic" type="text" name="user-patronymic" value="Александрович" id="user-patronymic" placeholder="Ваше Отчество">
+              </li>
+            </ul>
           </fieldset>
-          <fieldset class="feedback__user-fieldset">
-            <legend class="feedback__user-title">Контактная информация:</legend>
-            <label class="feedback__user-label" for="user-name">Контактный телефон*:</label>
-            <input class="feedback__user-text" type="text" name="user-phone" value="Введите телефон" id="user-phone" placeholder="Введите телефон">
-            <label class="feedback__user-label" for="user-email">Электрронная почта*:</label>
-            <input class="feedback__user-text" type="text" name="user-email" value="Введите e-mail" id="user-email" placeholder="Введите e-mail">
+          <fieldset class="feedback__contact-information">
+            <legend class="feedback__user-title feedback__legend-contact">Контактная информация:</legend>
+            <label class="feedback__user-label feedback__contact-phone" for="user-name">Контактный телефон*:</label>
+            <input class="feedback__user-text feedback__input-phone" type="text" name="user-phone" value="Введите телефон" id="user-phone" placeholder="Введите телефон">
+            <label class="feedback__user-label feedback__email" for="user-email">Электрронная почта*:</label>
+            <input class="feedback__user-text feedback__input-email" type="text" name="user-email" value="Введите e-mail" id="user-email" placeholder="Введите e-mail">
           </fieldset>
-          <fieldset class="feedback__user-fieldset">
+          <fieldset class="feedback__general-impression">
             <legend class="feedback__user-title">Ваше общее впечатление:</legend>
-            <input class="feedback__radio-input" type="radio" name="positive" value="positive" id="positive"checked>
-            <label class="feedback__radio-label" for="positive">Скорее положительное</label>
-            <input class="feedback__radio-input" type="radio" name="negative" value="negative" id="negative">
-            <label class="feedback__radio-label" for="negative">Скорее отрицательное</label>
-            <input class="feedback__radio-input" type="radio" name="complicate" value="complicate" id="complicate">
-            <label class="feedback__radio-label" for="complicate">Затрудняюсь ответить</label>
+            <ul class="feedback__radio-list">
+              <li class="feedback__radio-item">
+                <input class="feedback__radio-input visually-hidden" type="radio" name="positive" value="positive" id="positive"checked>
+                <label class="feedback__radio-label" for="positive">Скорее положительное</label>
+              </li>
+              <li class="feedback__radio-item">
+                <input class="feedback__radio-input visually-hidden" type="radio" name="negative" value="negative" id="negative">
+                <label class="feedback__radio-label" for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="feedback__radio-item">
+                <input class="feedback__radio-input visually-hidden" type="radio" name="complicate" value="complicate" id="complicate">
+                <label class="feedback__radio-label" for="complicate">Затрудняюсь ответить</label>
+              </li>
+            </ul>
           </fieldset>
-          <fieldset class="feedback__user-fieldset">
+
+
+
+          <fieldset class="feedback__visited-attractions">
             <legend class="feedback__user-title">Посещенные достопримечательности:</legend>
             <input class="feedback__checkbox-input" type="checkbox" name="devil's-bridge" value="devil's-bridge" id="devil's-bridge"checked>
             <label class="feedback__checkbox-label" for="devil's-bridge">Мост дьявола</label>
@@ -76,7 +96,7 @@
             <input class="feedback__checkbox-input" type="checkbox" name="red-rocks" value="red-rocks" id="red-rocks">
             <label class="feedback__checkbox-label" for="red-rocks">Красные скалы</label>
           </fieldset>
-          <fieldset class="feedback__comment-fieldset">
+          <fieldset class="feedback__emotions">
             <legend class="feedback__user-title">Опишите свои эмоции:</legend>
             <label class="feedback__comment-label" for="text-letter"></label>
             <textarea class="feedback__comment-textarea" name="text-letter" rows="7" id="text-letter" placeholder="Опишите подробно все свои восторги"></textarea>
