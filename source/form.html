@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <iframe style="display: none" src="img/sprite.svg"></iframe>
     <header class="page-header">
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип сайта Седона" width="102" height="84">
@@ -82,20 +83,29 @@
               </li>
             </ul>
           </fieldset>
-
-
-
           <fieldset class="feedback__visited-attractions">
             <legend class="feedback__user-title">Посещенные достопримечательности:</legend>
-            <input class="feedback__checkbox-input" type="checkbox" name="devil's-bridge" value="devil's-bridge" id="devil's-bridge"checked>
-            <label class="feedback__checkbox-label" for="devil's-bridge">Мост дьявола</label>
-            <input class="feedback__checkbox-label" for="bell-mountain" type="checkbox" name="bell-mountain" value="bell-mountain" id="bell-mountain"checked>
-            <label class="feedback__checkbox-label" for="bell-mountain">Гора-Колокол</label>
-            <input class="feedback__checkbox-input" type="checkbox" name="slide-park" value="slide-park" id="slide-park"checked>
-            <label class="feedback__checkbox-label" for="slide-park">Слайд-парк</label>
-            <input class="feedback__checkbox-input" type="checkbox" name="red-rocks" value="red-rocks" id="red-rocks">
-            <label class="feedback__checkbox-label" for="red-rocks">Красные скалы</label>
+            <ul class="feedback__attractions-list">
+              <li class="feedback__attractions-item">
+                <input class="feedback__checkbox-input" type="checkbox" name="devil's-bridge" value="devil's-bridge" id="devil's-bridge"checked>
+                <label class="feedback__checkbox-label" for="devil's-bridge">Мост Дьявола</label>
+              </li>
+              <li class="feedback__attractions-item">
+                <input class="feedback__checkbox-input" for="bell-mountain" type="checkbox" name="bell-mountain" value="bell-mountain" id="bell-mountain"checked>
+                <label class="feedback__checkbox-label" for="bell-mountain">Гора-Колокол</label>
+              </li>
+              <li class="feedback__attractions-item">
+                <input class="feedback__checkbox-input" type="checkbox" name="slide-park" value="slide-park" id="slide-park"checked>
+                <label class="feedback__checkbox-label" for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="feedback__attractions-item">
+                <input class="feedback__checkbox-input" type="checkbox" name="red-rocks" value="red-rocks" id="red-rocks">
+                <label class="feedback__checkbox-label" for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
           </fieldset>
+
+
           <fieldset class="feedback__emotions">
             <legend class="feedback__user-title">Опишите свои эмоции:</legend>
             <label class="feedback__comment-label" for="text-letter"></label>
@@ -106,24 +116,44 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__tag" href="#">#VisitsSedona</a>
+      <a class="page-footer__tag" href="#">#VisitSedona</a>
       <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <span class="copyright__text">Разработано</span>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
-      </div>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="">
+                <span class="visually-hidden">Мы в Твиттере</span>
+                <svg width="9" height="18">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+                <svg width="9" height="18">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="">
+                <span class="visually-hidden">Мы в Ютубе</span>
+                <svg width="20" height="14">
+                  <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__link-icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
     </footer>
   </body>
 </html>

@@ -5,13 +5,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .page-header__logo {
   text-align: center;
+
   img {
     width: 102px;
     height: 83px;
   }
 }
+
 @media (min-width: @tablet-width) {
   .page-header__logo {
     order: 2;
@@ -20,8 +23,14 @@
     margin-top: -54px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header__logo {
     min-height: 95px;
+
+    img {
+      width: 188px;
+      height: 96px;
+    }
   }
 }

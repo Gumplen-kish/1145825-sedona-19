@@ -6,6 +6,7 @@
   min-height: 162px;
   text-align: center;
   padding: 21px 9px 3px 9px;
+
   &::after {
     position: absolute;
     content: "";
@@ -18,6 +19,7 @@
     z-index: 1;
   }
 }
+
 .feedback__title {
   font-size: 18px;
   font-weight: 700;
@@ -25,12 +27,14 @@
   text-transform: uppercase;
   padding-bottom: 12px;
 }
+
 .feedback__text {
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
   color: #333333;
 }
+
 /*Здесь начинается блок "Представьтесь"*/
 .feedback__form {
   width: 320px;
@@ -38,30 +42,23 @@
   padding-right: 20px;
   padding-left: 20px;
 }
+
 /*Здесь fieldsets*/
 .feedback__fieldset-represent,
 .feedback__contact-information,
 .feedback__general-impression,
 .feedback__visited-attractions,
 .feedback__emotions {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  border-style: none;
-  &:not(.feedback__emotions)::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    right: -20px;
-    height: 1px;
-    width: 120%;
-    padding: 0;
-    background-color: #333333;
-    opacity: 0.1;
-    z-index: 1;
-  }
+  .setting-fieldset();
 }
+
+.feedback__fieldset-represent::after,
+.feedback__contact-information::after,
+.feedback__general-impression::after,
+.feedback__visited-attractions::after {
+  .line-bottom();
+}
+
 .feedback__user-title {
   width: 100%;
   padding-top: 17px;
@@ -72,6 +69,7 @@
   text-transform: uppercase;
   line-height: 26px;
 }
+
 /*Здесь общие стили списка, пунктов, label и input*/
 .feedback__list-wrapper {
   margin-top: 0;
@@ -80,12 +78,14 @@
   list-style: none;
   padding: 0;
 }
+
 .feedback__item {
   display: flex;
   width: 279px;
   padding-bottom: 21px;
   align-items: center;
 }
+
 .feedback__user-label {
   font-size: 14px;
   line-height: 1.86;
@@ -93,12 +93,13 @@
   color: #333333;
   text-transform: uppercase;
 }
+
 .feedback__user-text {
   width: 100%;
   height: 58px;
   padding: 0;
   padding-left: 22px;
-  font-family: "PTSans",Arial,sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -107,56 +108,66 @@
   outline: none;
   color: #000000;
 }
+
 /*Здесь стили выравнивания*/
 .feedback__user-name {
   margin-top: 4px;
   margin-right: 12px;
 }
+
 .feedback__user-represent {
   padding-right: 23px;
 }
+
 .feedback__user-fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
+
 .feedback__user-surname {
   margin-right: 13px;
 }
+
 .feedback__input-surname {
   padding-left: 22px;
 }
+
 .feedback__user-patronymic {
   margin-right: 16px;
 }
+
 /*Это блок "Контактная информация"*/
 .feedback__legend-contact {
   padding-left: 0;
 }
+
 .feedback__contact-phone {
   margin-left: 22px;
 }
+
 .feedback__input-phone {
   margin-top: 7px;
   padding-left: 22px;
   margin-bottom: 12px;
 }
+
 .feedback__email {
   margin-left: 15px;
 }
+
 .feedback__input-email {
   margin-top: 7px;
   margin-bottom: 29px;
 }
+
 /*Это блок "Общие впечатления"*/
 .feedback__radio-list {
   list-style: none;
   margin-bottom: 43px;
 }
-.feedback__radio-item {
-  margin-bottom: 44px;
-}
-.feedback__radio-input:checked+label {
+
+.feedback__radio-input:checked + label {
   &::before {
     position: absolute;
     content: "";
@@ -168,12 +179,16 @@
     border-radius: 50%;
     z-index: 1;
   }
+
   &:active::before {
     opacity: 0.3;
   }
 }
+
 .feedback__radio-item {
   position: relative;
+  margin-bottom: 44px;
+
   &::before {
     position: absolute;
     content: "";
@@ -185,17 +200,154 @@
     border-radius: 50%;
     z-index: 0;
   }
+
   &:hover::before {
     background-color: #e5e5e5;
   }
+
   &:active::before {
     background-color: #d5d5d5;
   }
 }
+
 .feedback__radio-label {
   margin-left: 39px;
-  font-family: "PTSans",Arial, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
+}
+
+/*Это блок "Посещенные достопримечательности"*/
+.feedback__attractions-list {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 14px;
+  list-style: none;
+}
+
+.feedback__attractions-item {
+  position: relative;
+  margin-bottom: 55px;
+
+  &:last-child {
+    margin-bottom: 42px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: -1px;
+    width: 56px;
+    height: 56px;
+    border: solid 5px @form-input;
+    border-radius: 5px;
+    background-color: @form-input;
+  }
+}
+
+.feedback__checkbox-input {
+  display: none;
+}
+
+.feedback__checkbox-label {
+  margin-left: 79px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.44;
+  text-align: left;
+}
+
+/*Это блок "Опишите свои эмоции"*/
+.feedback__comment-textarea {
+  width: 279px;
+  height: 160px;
+  margin-bottom: 44px;
+  padding: 0;
+  border-style: none;
+  background-color: @form-input;
+
+  &::placeholder {
+    padding-top: 13px;
+    padding-left: 20px;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    color: #000000;
+  }
+}
+
+.feedback__comment-send {
+  display: block;
+  width: 280px;
+  height: 58px;
+  padding-top: 16px;
+  padding-right: 27px;
+  padding-bottom: 21px;
+  padding-left: 27px;
+  margin-bottom: 73px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: @light-blue;
+  border-style: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+/*Это секция интро отзыва*/
+  .feedback {
+    min-width: 439px;
+    min-height: 103px;
+    padding-top: 50px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .feedback__title {
+    font-size: 30px;
+    line-height: 0.87;
+    padding-bottom: 5px;
+  }
+
+  .feedback__text {
+    padding-left: 154px;
+    padding-right: 154px;
+    line-height: 1.71;
+  }
+
+  .feedback__form {
+    min-width: 768px;
+    margin-bottom: 59px;
+  }
+  .feedback__user-title {
+    margin-bottom: 73px;
+    padding: 0;
+    font-size: 21px;
+    text-align: start;
+
+  }
+  .feedback__list-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
 }

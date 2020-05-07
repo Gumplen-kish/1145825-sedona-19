@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .photos__item {
   position: relative;
   display: flex;
@@ -9,8 +10,9 @@
   flex-wrap: wrap;
   align-items: left;
   list-style: none;
-  margin: 22px 20px;
+  margin: 19px 20px;
   padding: 0;
+
   &::after {
     position: absolute;
     content: "";
@@ -23,9 +25,15 @@
     z-index: 1;
   }
 }
+
+.photos__item-wrapper {
+  padding: 0;
+  margin: 0;
+}
 .photos__img {
   margin-bottom: 15px;
 }
+
 .photos__title {
   display: block;
   margin: 0;
@@ -34,17 +42,20 @@
   line-height: 24px;
   text-transform: uppercase;
 }
+
 .photos__creator {
   display: block;
   font-size: 14px;
   line-height: 24px;
 }
+
 .photos__like-wrapper {
   display: flex;
   flex-direction: row;
   margin-top: 7px;
   margin-bottom: 21px;
 }
+
 .photos__button-like {
   display: block;
   width: 23px;
@@ -55,8 +66,8 @@
   background-color: transparent;
   border-style: none;
   opacity: 0.3;
-
 }
+
 .photos__like-total {
   display: block;
   margin-top: 12px;
@@ -65,6 +76,78 @@
   font-weight: bold;
   line-height: 1.24px;
 }
+/*Блок видео*/
+.photos__video-scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 45px;
+  margin-top: -48px;
+  margin-left: 20px;
+  background-color: black;
+}
+
+.photos__video-slider {
+  position: relative;
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 35px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+}
+
+.photos__video-controls {
+  display: flex;
+  min-width: 280px;
+  min-height: 66px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: @form-input;
+}
+
+.photos__video-controls-icon {
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  opacity: 0.6;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.photos__video-controls-replay {
+  padding-left: 25px;
+  padding-right: 28px;
+}
+.photos__video-controls-subtitle {
+  padding-left: 105px;
+  padding-right: 0;
+}
+
+.photos__video-controls-fullscreen {
+  padding-left: 31px;
+  padding-right: 23px;
+}
+
+
 @media (min-width: @tablet-width) {
   .photos__list {
     display: flex;
@@ -73,6 +156,15 @@
     width: 648px;
     margin: 0 auto;
   }
+
+  .photos__item-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   .photos__item {
     display: flex;
     flex-direction: row;
@@ -82,40 +174,116 @@
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+
     &--full-width {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      padding-bottom: 10px
+      padding-bottom: 10px;
     }
+
     &::after {
       display: none;
     }
   }
+
   .photos__img {
     width: 100%;
     margin-bottom: 0;
+
     &--full-width {
       min-width: 648px;
       min-height: 400px;
     }
   }
+
   .photos__wrapper-text {
     padding-left: 21px;
     padding-top: 10px;
+
+    &--left {
+      padding-top: 3px;
+    }
+    &--right {
+      padding-top: 5px;
+    }
   }
+
   .photos__like-wrapper {
     margin-top: 23px;
     margin-right: 20px;
+    &--left {
+      margin-top: 18px;
+      margin-right: 28px;
+    }
+    &--right {
+      margin-top: 18px;
+      margin-right: 36px;
+    }
   }
+
   .photos__like-total {
     margin-left: 10px;
   }
+
   .photos__video {
     width: 648px;
     height: 499px;
     margin-left: 60px;
     padding-top: 16px;
+  }
+}
+
+/*Блок видео*/
+.photos__video-scale {
+  justify-content: flex-start;
+  width: 648px;
+  height: 93px;
+  margin-top: -93px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.photos__video-slider {
+  width: 389px;
+  margin-left: 93px;
+
+  &::before {
+  left: 112px;
+  }
+}
+
+.photos__video-controls {
+  width: 648px;
+  height: 93px;
+  margin-top: -93px;
+  background: transparent;
+  z-index: 10;
+}
+
+@media (min-width: @desktop-width) {
+  .photos__list {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .photos__item {
+    min-width: 400px;
+    min-height: 267px;
+    background-color: transparent;
+
+    &--full-width {
+      min-width: 1200px;
+      min-height: 480px;
+    }
+  }
+
+  .photos__img {
+    &--full-width {
+      width: 1200px;
+    }
   }
 }

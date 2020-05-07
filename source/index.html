@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <iframe style="display: none" src="img/sprite.svg"></iframe>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип сайта Седона" width="102" height="84">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" alt="Логотип сайта Седона">
         </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -48,7 +49,7 @@
         </div>
         <div class="advantages__wrapper">
           <div class="advantages__item advantages__item--blue-first">
-            <h3 class="advantages__title">Настоящий городок</h3>
+            <h3 class="advantages__title advantages__title--first">Настоящий городок</h3>
             <p class="advantages__number">&#8211; &#8470;1 &#8211;</p>
             <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -83,24 +84,24 @@
           </div>
           <picture>
             <source media="(min-width:1200px)" srcset="img/main-bridge-desktop@1x.jpg">
-            <source media="(min-width:768px)" srcset="img/photo-bridge-1-x.png">
-            <img class="advantages__img" src="img/photo-bridge-mobile@1x.jpg" alt="Фотография моста дьявола" width="320" height="260">
+            <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg">
+            <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" alt="Фотография моста дьявола" width="320" height="260">
           </picture>
         </div>
         <div class="advantages__wrapper">
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--gray">
-              <h3 class="advantages__title">Небольшая площадь</h3>
+              <h3 class="advantages__title advantages__title--3">Небольшая площадь</h3>
               <p class="advantages__number-gray">&#8211; &#8470;3 &#8211;</p>
-              <p class="advantages__description">Все интересны места находятся очень близко</p>
+              <p class="advantages__description">Все интересные места находятся очень близко</p>
             </li>
             <li class="advantages__item advantages__item--gray">
-              <h3 class="advantages__title">Красивая дорога</h3>
+              <h3 class="advantages__title advantages__title--4">Красивая дорога</h3>
               <p class="advantages__number-gray">&#8211; &#8470;4 &#8211;</p>
-              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="advantages__description">Ехать в Седону из Лас-&nbsp;Вегаса совсем не скучно!</p>
             </li>
             <li class="advantages__item advantages__item--gray">
-              <h3 class="advantages__title">Мало туристов</h3>
+              <h3 class="advantages__title advantages__title--5">Мало туристов</h3>
               <p class="advantages__number-gray">&#8211; &#8470;5 &#8211;</p>
               <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
@@ -118,22 +119,42 @@
     <footer class="page-footer">
       <a class="page-footer__tag" href="#">#VisitSedona</a>
       <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <span class="page-footer__text copyright__text">Разработано</span>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
-      </div>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="">
+                <span class="visually-hidden">Мы в Твиттере</span>
+                <svg width="9" height="18">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+                <svg width="9" height="18">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="">
+                <span class="visually-hidden">Мы в Ютубе</span>
+                <svg width="20" height="14">
+                  <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__link-icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
     </footer>
   </body>
 </html>

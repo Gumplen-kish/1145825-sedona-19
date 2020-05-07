@@ -5,51 +5,21 @@
   padding: 0;
   list-style: none;
 }
+
 .social__item {
   margin-right: 6px;
+
   &:last-child {
-    margin-right:0;
+    margin-right: 0;
   }
 }
+
 .social__link {
-  position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
-  padding: 0;
-  margin: 0;
+  fill: #ffffff;
   background-color: @light-blue;
-  &--twitter::after {
-    position: absolute;
-    content: "";
-    top: 17px;
-    left: 13px;
-    display: block;
-    width: 18px;
-    height: 14px;
-    background-image: url("../../img/icon-twitter.svg");
-    background-repeat: no-repeat;
-  }
-  &--facebook::after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    left: 18px;
-    display: block;
-    width: 9px;
-    height: 18px;
-    background-image: url("../../img/icon-facebook.svg");
-    background-repeat: no-repeat;
-  }
-  &--youtube::after {
-    position: absolute;
-    content: "";
-    top: 17px;
-    left: 13px;
-    display: block;
-    width: 20px;
-    height: 14px;
-    background-image: url("../../img/icon-youtube.svg");
-    background-repeat: no-repeat;
-  }
 }
