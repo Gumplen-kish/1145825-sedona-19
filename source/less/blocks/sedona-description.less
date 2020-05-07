@@ -1,28 +1,68 @@
 .sedona-description {
+  width: 100%;
+  min-height: 150px;
   padding-top: 22px;
-  padding-right: 33px;
-  padding-bottom: 7px;
-  padding-left: 32px;
-  background-image: url("../../img/bg-intro-triangle-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: 766px 37px;
-  background-color: white;
 }
+
 .sedona-description__about {
-  margin-bottom: 30px;
+  margin-top: 18px;
+  margin-bottom: 27px;
   text-align: center;
   line-height: 26px;
-  font-family: "PTSans","Arial",sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   text-transform: uppercase;
 }
+
 .sedona-description__reasons {
+  padding: 0 10px;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 26px;
   font-weight: 400;
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .sedona-description {
+    display: block;
+    min-width: 490px;
+    min-height: 100px;
+    padding: 22px 130px 49px;
+  }
+
+  .sedona-description__about {
+    display: block;
+    margin-top: 26px;
+    margin-bottom: 29px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+  }
+
+  .sedona-description__reasons {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.86;
+    color: #333333;
+    letter-spacing: 0.11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sedona-description {
+    padding-top: 24px;
+    padding-left: 350px;
+    padding-right: 400px;
+  }
 }

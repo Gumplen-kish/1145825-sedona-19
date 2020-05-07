@@ -5,34 +5,96 @@
   background-color: #ffffff;
   opacity: 0.9;
 }
+
 .page-footer__tag {
   display: block;
   width: 136px;
-  height: 16px;
-  padding-top: 31px;
-  padding-right: 93px;
+  padding-top: 28px;
   text-align: center;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1.24;
   font-size: 21px;
   text-decoration: none;
   color: #000000;
 }
+
 .page-footer__social {
-  padding-top: 41px;
+  padding-top: 36px;
 }
+
 .page-footer__copyright {
-  padding-top: 51px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 47px;
 }
+
+.copyright {
+  position: relative;
+}
+
 .copyright__text {
+  padding-right: 41px;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
   text-align: center;
   padding-bottom: 35px;
 }
+
+.copyright__link-icon {
+  position: absolute;
+  content: "";
+  top: 36px;
+  left: 94px;
+  display: block;
+  width: 35px;
+  height: 40px;
+  padding-left: 1px;
+}
+
 .copyright__link {
-  content: url(../../img/logo-htmlacademy.svg);
-  padding-left: 11px;
+  &:hover {
+    fill: @light-blue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+    min-width: 768px;
+    min-height: 120px;
+    margin: 0;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .page-footer__tag {
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .page-footer__social {
+    padding: 0;
+  }
+
+  .page-footer__copyright {
+    display: flex;
+    padding: 0;
+  }
+
+  .page-footer__text {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    justify-content: space-around;
+  }
 }

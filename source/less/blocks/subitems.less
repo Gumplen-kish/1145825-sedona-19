@@ -4,14 +4,16 @@
   flex-direction: column;
   list-style: none;
   margin: 0 auto;
-  padding: 25px 20px 20px 70px;
+  padding: 25px 20px 26px 70px;
   z-index: 0;
 }
+
 .subitems__item {
   position: relative;
   min-height: 110px;
-  padding: 10px 0;
+  padding: 8px 0;
   text-align: left;
+
   &--housing::before {
     position: absolute;
     content: "";
@@ -26,6 +28,7 @@
     background-repeat: no-repeat;
     background-size: 37px 36px;
   }
+
   &--souvenirs::before {
     position: absolute;
     content: "";
@@ -40,6 +43,7 @@
     background-repeat: no-repeat;
     background-size: 32px 38px;
   }
+
   &--food::before {
     position: absolute;
     content: "";
@@ -55,11 +59,13 @@
     background-size: 40px 35px;
   }
 }
+
 .subitems__title {
   text-align: left;
   text-transform: uppercase;
   font-size: 18px;
 }
+
 .subitems__description {
   text-align: left;
   text-transform: uppercase;
@@ -68,3 +74,86 @@
   line-height: 1.5;
 }
 
+@media (min-width: @tablet-width) {
+  .subitems__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .subitems__item {
+    display: flex;
+    min-width: 165px;
+    padding-top: 149px;
+    padding-bottom: 59px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &--housing::before {
+      top: 51px;
+      left: 44px;
+      display: block;
+      width: 75px;
+      height: 72px;
+      object-fit: contain;
+      background-size: 75px 72px;
+    }
+
+    &--food::before {
+      top: 54px;
+      left: 43px;
+      display: block;
+      width: 77px;
+      height: 68px;
+      object-fit: contain;
+      background-size: 77px 68px;
+    }
+
+    &--souvenirs::before {
+      top: 48px;
+      left: 49px;
+      display: block;
+      width: 64px;
+      height: 75px;
+      object-fit: contain;
+      background-size: 64px 75px;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+
+  .subitems__title {
+    text-align: center;
+    padding-bottom: 22px;
+    font-size: 21px;
+  }
+
+  .subitems__description {
+    width: 166px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .subitems__list {
+    min-width: 1200px;
+    margin-bottom: 21px;
+  }
+
+  .subitems__item {
+    min-width: 400px;
+  }
+
+  .subitems__description {
+    min-width: 300px;
+  }
+}
