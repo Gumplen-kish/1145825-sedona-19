@@ -30,6 +30,7 @@
   padding: 0;
   margin: 0;
 }
+
 .photos__img {
   margin-bottom: 15px;
 }
@@ -60,9 +61,6 @@
   display: block;
   width: 23px;
   height: 21px;
-  background-image: url("../../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-size: 23px 21px;
   background-color: transparent;
   border-style: none;
   opacity: 0.3;
@@ -77,7 +75,12 @@
   line-height: 1.24px;
 }
 /*Блок видео*/
+.photos__video {
+  padding-bottom: 48px;
+}
+
 .photos__video-scale {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +88,8 @@
   height: 45px;
   margin-top: -48px;
   margin-left: 20px;
-  background-color: black;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .photos__video-slider {
@@ -93,6 +97,7 @@
   width: 235px;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.2);
+
 
   &::before {
     position: absolute;
@@ -129,14 +134,17 @@
   &:hover {
     opacity: 1;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 .photos__video-controls-replay {
   padding-left: 25px;
   padding-right: 28px;
 }
+
 .photos__video-controls-subtitle {
   padding-left: 105px;
   padding-right: 0;
@@ -157,7 +165,7 @@
     margin: 0 auto;
   }
 
-  .photos__item-wrapper{
+  .photos__item-wrapper {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -205,6 +213,7 @@
     &--left {
       padding-top: 3px;
     }
+
     &--right {
       padding-top: 5px;
     }
@@ -213,10 +222,12 @@
   .photos__like-wrapper {
     margin-top: 23px;
     margin-right: 20px;
+
     &--left {
       margin-top: 18px;
       margin-right: 28px;
     }
+
     &--right {
       margin-top: 18px;
       margin-right: 36px;
@@ -226,40 +237,69 @@
   .photos__like-total {
     margin-left: 10px;
   }
-
+  /*Блок видео*/
   .photos__video {
+    position: relative;
     width: 648px;
     height: 499px;
     margin-left: 60px;
     padding-top: 16px;
+    padding-bottom: 0;
   }
-}
 
-/*Блок видео*/
-.photos__video-scale {
-  justify-content: flex-start;
-  width: 648px;
-  height: 93px;
-  margin-top: -93px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 5;
-}
-
-.photos__video-slider {
-  width: 389px;
-  margin-left: 93px;
-
-  &::before {
-  left: 112px;
+  .photos__video-picture {
+    .picture-style();
   }
-}
 
-.photos__video-controls {
-  width: 648px;
-  height: 93px;
-  margin-top: -93px;
-  background: transparent;
-  z-index: 10;
+  .photos__video-scale {
+    position: absolute;
+    bottom: -17px;
+    left: -20px;
+    justify-content: flex-start;
+    width: 648px;
+    height: 93px;
+    margin-right: 10px;
+    margin-top: -93px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .photos__video-slider {
+    width: 389px;
+    margin-left: 93px;
+
+    &::before {
+      left: 112px;
+    }
+  }
+
+  .photos__video-controls {
+    position: absolute;
+    bottom: -17px;
+    left: -20px;
+    width: 648px;
+    height: 93px;
+    margin-top: -93px;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .photos__video-controls-icon {
+    fill: #ffffff;
+    opacity: 1;
+  }
+
+  .photos__video-controls-replay {
+    width: 16px;
+    height: 93px;
+    padding-left: 35px;
+    object-fit: contain;
+  }
+  .photos__video-controls-subtitle {
+    width: 32px;
+    height: 93px;
+    padding-left: 35px;
+    object-fit: contain;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -270,20 +310,68 @@
     margin: 0;
   }
 
+  .photos__item-wrapper {
+    position: absolute;
+    bottom: 4px;
+    width: 400px;
+    height: 80px;
+    padding-top: 8px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &--full-width {
+      width: 1200px;
+    }
+  }
+
   .photos__item {
+    position: relative;
     min-width: 400px;
     min-height: 267px;
     background-color: transparent;
 
     &--full-width {
       min-width: 1200px;
-      min-height: 480px;
+      min-height: 400px;
+      padding: 0;
     }
+  }
+  .photos__item-picture {
+    .picture-style();
   }
 
   .photos__img {
     &--full-width {
       width: 1200px;
     }
+  }
+
+  .photos__button-like-icon {
+    fill: #ffffff;
+  }
+
+  .photos__like-total {
+    margin-left: 16px;
+  }
+
+  /*Блок видео*/
+  .photos__video {
+    min-width: 800px;
+    margin-left: 199px;
+    padding-top: 13px;
+  }
+
+  .photos__video-scale {
+    min-width: 800px;
+    bottom: -14px;
+  }
+
+  .photos__video-slider {
+    min-width: 540px;
+  }
+
+  .photos__video-controls {
+    min-width: 800px;
+    bottom: -14px;
   }
 }

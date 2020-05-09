@@ -18,6 +18,10 @@
   font-size: 21px;
   text-decoration: none;
   color: #000000;
+
+  &--form {
+    padding-top: 0;
+  }
 }
 
 .page-footer__social {
@@ -27,6 +31,7 @@
 .page-footer__copyright {
   position: relative;
   display: flex;
+  width: 120px;
   align-items: center;
   padding-top: 47px;
 }
@@ -36,19 +41,13 @@
 }
 
 .copyright__text {
-  padding-right: 41px;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
   text-align: center;
-  padding-bottom: 35px;
 }
 
 .copyright__link-icon {
-  position: absolute;
-  content: "";
-  top: 36px;
-  left: 94px;
   display: block;
   width: 35px;
   height: 40px;
@@ -56,6 +55,9 @@
 }
 
 .copyright__link {
+  width: 27px;
+  height: 34px;
+
   &:hover {
     fill: @light-blue;
   }

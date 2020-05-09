@@ -161,6 +161,34 @@
   margin-bottom: 29px;
 }
 
+.feedback__contact-wrapper {
+  position: relative;
+
+  &--phone {
+  position: absolute;
+  top: 33px;
+  left: 223px;
+  width: 58px;
+  height: 57px;
+  background-color: #e6e6e6;
+  background-image: url("../../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  }
+
+  &--mail {
+  position: absolute;
+  top: 33px;
+  left: 223px;
+  width: 58px;
+  height: 57px;
+  background-color: #e6e6e6;
+  background-image: url("../../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  }
+}
+
 /*Это блок "Общие впечатления"*/
 .feedback__radio-list {
   list-style: none;
@@ -247,12 +275,8 @@
   }
 }
 
-.feedback__checkbox-input {
-  display: none;
-}
-
 .feedback__checkbox-label {
-  margin-left: 79px;
+  margin-left: 55px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 18px;
   font-stretch: normal;
@@ -310,7 +334,7 @@
 }
 
 @media (min-width: @tablet-width) {
-/*Это секция интро отзыва*/
+  /*Это секция интро отзыва*/
   .feedback {
     min-width: 439px;
     min-height: 103px;
@@ -337,17 +361,41 @@
     min-width: 768px;
     margin-bottom: 59px;
   }
+
   .feedback__user-title {
     margin-bottom: 73px;
     padding: 0;
     font-size: 21px;
     text-align: start;
-
   }
-  .feedback__list-wrapper {
+
+  .feedback__user {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 60px;
+  }
+
+  .feedback__general-impression {
+    width: 50%;
+    order: 1;
+  }
+
+  .feedback__fieldset-represent {
+    width: 50%;
+    order: 2;
+  }
+
+  .feedback__contact-information {
+    width: 100%;
+    order: 3;
+  }
+
+  .feedback__visited-attractions {
+    width: 100%;
+    order: 4;
+  }
+
+  .feedback__emotions {
+    width: 100%;
+    order: 5;
   }
 }
