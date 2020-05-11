@@ -165,27 +165,27 @@
   position: relative;
 
   &--phone {
-  position: absolute;
-  top: 33px;
-  left: 223px;
-  width: 58px;
-  height: 57px;
-  background-color: #e6e6e6;
-  background-image: url("../../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
+    position: absolute;
+    top: 33px;
+    left: 223px;
+    width: 58px;
+    height: 57px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
 
   &--mail {
-  position: absolute;
-  top: 33px;
-  left: 223px;
-  width: 58px;
-  height: 57px;
-  background-color: #e6e6e6;
-  background-image: url("../../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
+    position: absolute;
+    top: 33px;
+    left: 223px;
+    width: 58px;
+    height: 57px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
 }
 
@@ -195,47 +195,36 @@
   margin-bottom: 43px;
 }
 
-.feedback__radio-input:checked + label {
-  &::before {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: -22px;
-    width: 20px;
-    height: 20px;
-    background-color: #333333;
-    border-radius: 50%;
-    z-index: 1;
-  }
+.feedback__radio-input + .feedback__radio-label::before {
+  position: absolute;
+  content: "";
+  top: -12px;
+  left: -39px;
+  width: 55px;
+  height: 55px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  z-index: 0;
+}
+.feedback__radio-input:checked + .feedback__radio-label::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: -23px;
+  width: 22px;
+  height: 22px;
+  background-color: #333333;
+  border-radius: 50%;
+  z-index: 1;
+}
 
-  &:active::before {
-    opacity: 0.3;
-  }
+.feedback__radio-input {
+  display: none;
 }
 
 .feedback__radio-item {
   position: relative;
   margin-bottom: 44px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -12px;
-    left: -39px;
-    width: 55px;
-    height: 55px;
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    z-index: 0;
-  }
-
-  &:hover::before {
-    background-color: #e5e5e5;
-  }
-
-  &:active::before {
-    background-color: #d5d5d5;
-  }
 }
 
 .feedback__radio-label {
@@ -261,22 +250,42 @@
   &:last-child {
     margin-bottom: 42px;
   }
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -1px;
-    width: 56px;
-    height: 56px;
-    border: solid 5px @form-input;
-    border-radius: 5px;
-    background-color: @form-input;
-  }
 }
 
+.feedback__checkbox-input + .feedback__checkbox-label::before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: -1px;
+  width: 56px;
+  height: 56px;
+  border: solid 5px @form-input;
+  border-radius: 5px;
+  background-color: @form-input;
+}
+.feedback__checkbox-input:checked + .feedback__checkbox-label::before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: -1px;
+  width: 56px;
+  height: 56px;
+  border: solid 5px @form-input;
+  border-radius: 5px;
+  background-color: @form-input;
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.feedback__checkbox-input {
+  display: none;
+}
+
+
 .feedback__checkbox-label {
-  margin-left: 55px;
+  position: relative;
+  margin-left: 2px;
+  padding-left: 76px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 18px;
   font-stretch: normal;
@@ -333,7 +342,18 @@
   color: #ffffff;
 }
 
+.feedback__emotions-info {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .feedback__fieldset-represent::after,
+  .feedback__contact-information::after,
+  .feedback__general-impression::after,
+  .feedback__visited-attractions::after {
+    bottom: -13px;
+    order: 0;
+  }
   /*Это секция интро отзыва*/
   .feedback {
     min-width: 439px;
@@ -360,42 +380,164 @@
   .feedback__form {
     min-width: 768px;
     margin-bottom: 59px;
+    padding-left: 60px;
+    padding-top: 59px;
   }
 
   .feedback__user-title {
-    margin-bottom: 73px;
+    margin-bottom: 56px;
     padding: 0;
     font-size: 21px;
     text-align: start;
   }
 
-  .feedback__user {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
+  /*Расставляем очередность*/
+   /*Блок Общее впечатление*/
   .feedback__general-impression {
+    position: relative;
     width: 50%;
     order: 1;
+
+    &::after {
+      position: absolute;
+      top: 5px;
+      left: 323px;
+      width: 1px;
+      height: 292px;
+    }
   }
 
+  .feedback__radio-list {
+    height: 250px;
+    margin-bottom: 19px;
+  }
+
+  .feedback__radio-item {
+    margin-bottom: 54px;
+  }
+
+  .feedback__radio-label {
+    margin-left: 35px;
+  }
+  /*Блок Представьтесь*/
   .feedback__fieldset-represent {
     width: 50%;
+    padding-left: 40px;
     order: 2;
   }
 
+  .feedback__item {
+    width: 264px;
+  }
+
+  /*Блок Контактная информация*/
   .feedback__contact-information {
     width: 100%;
+    margin-bottom: 30px;
     order: 3;
   }
 
+  .feedback__legend-contact {
+    display: block;
+    background-color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  .feedback__contact-wrapper {
+    margin-bottom: 11px;
+  }
+
+  .feedback__contact-wrapper--phone {
+    left: 591px;
+  }
+
+  .feedback__contact-wrapper--mail {
+    left: 590px;
+  }
+
+  /*Блок Посещенные достопримечательности*/
   .feedback__visited-attractions {
     width: 100%;
     order: 4;
   }
+  .feedback__visited-attractions-title {
+    width: 365px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
 
+  .feedback__attractions-list {
+    display: flex;
+    min-width: 600px;
+    max-height: 200px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .feedback__attractions-item {
+    width: 30%;
+    margin-bottom: 63px;
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+  }
+
+  /*Блок Опиши свои эмоции*/
   .feedback__emotions {
+    margin-top: 22px;
     width: 100%;
     order: 5;
+  }
+
+  .feedback__comment-textarea {
+    width: 648px;
+    margin-bottom: 54px;
+    padding-left: 12px;
+
+    &::placeholder {
+      padding-top: 16px;
+      padding-left: 9px;
+    }
+  }
+
+  .feedback__comment-send {
+    width: 324px;
+    padding-left: 12px;
+    margin-bottom: 0px;
+    order: 6;
+  }
+
+  .feedback__emotions-info {
+    display: block;
+    width: 162px;
+    height: 11px;
+    margin-top: 18px;
+    margin-left: 162px;
+    font-family: "PTSans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    text-align: right;
+    text-transform: uppercase;
+    order: 7;
+    color: #333333;
+  }
+
+  .feedback__user {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

@@ -82,21 +82,21 @@
             <legend class="feedback__user-title">Ваше общее впечатление:</legend>
             <ul class="feedback__radio-list">
               <li class="feedback__radio-item">
-                <input class="feedback__radio-input visually-hidden" type="radio" name="positive" value="positive" id="positive"checked>
+                <input class="feedback__radio-input" type="radio" name="positive" value="positive" id="positive"checked>
                 <label class="feedback__radio-label" for="positive">Скорее положительное</label>
               </li>
               <li class="feedback__radio-item">
-                <input class="feedback__radio-input visually-hidden" type="radio" name="negative" value="negative" id="negative">
+                <input class="feedback__radio-input" type="radio" name="negative" value="negative" id="negative">
                 <label class="feedback__radio-label" for="negative">Скорее отрицательное</label>
               </li>
               <li class="feedback__radio-item">
-                <input class="feedback__radio-input visually-hidden" type="radio" name="complicate" value="complicate" id="complicate">
+                <input class="feedback__radio-input" type="radio" name="complicate" value="complicate" id="complicate">
                 <label class="feedback__radio-label" for="complicate">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="feedback__visited-attractions">
-            <legend class="feedback__user-title">Посещенные достопримечательности:</legend>
+            <legend class="feedback__user-title feedback__visited-attractions-title">Посещенные достопримечательности:</legend>
             <ul class="feedback__attractions-list">
               <li class="feedback__attractions-item">
                 <input class="feedback__checkbox-input" type="checkbox" name="devil's-bridge" value="devil's-bridge" id="devil's-bridge"checked>
@@ -116,14 +116,13 @@
               </li>
             </ul>
           </fieldset>
-
-
           <fieldset class="feedback__emotions">
             <legend class="feedback__user-title">Опишите свои эмоции:</legend>
             <label class="feedback__comment-label" for="text-letter"></label>
             <textarea class="feedback__comment-textarea" name="text-letter" rows="7" id="text-letter" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="feedback__comment-send" type="submit" name="send" value="send">Отправить отзыв</button>
+          <p class="feedback__emotions-info">* &ndash; обязательные поля</p>
         </form>
       </section>
     </main>

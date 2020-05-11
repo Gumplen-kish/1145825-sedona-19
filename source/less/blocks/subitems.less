@@ -145,15 +145,33 @@
 
 @media (min-width: @desktop-width) {
   .subitems__list {
-    min-width: 1200px;
+    width: 1200px;
     margin-bottom: 21px;
   }
 
   .subitems__item {
-    min-width: 400px;
+    width: 400px;
+
+
+    &--housing::before {
+      top: 50px;
+      left: 150px;
+    }
+
+    &--food::before {
+      top: 53px;
+      left: 131px;
+    }
+
+    &--souvenirs::before {
+      top: 47px;
+      left: 117px;
+    }
   }
 
   .subitems__description {
-    min-width: 300px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
