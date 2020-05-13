@@ -41,7 +41,7 @@
       </section>
       <section class="feedback">
         <h1 class="feedback__title">Оставьте свой отзыв</h1>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
       </section>
       <section class="feedback__form">
         <h3 class="visually-hidden"> Форма обратного отзыва</h3>
@@ -65,21 +65,24 @@
           </fieldset>
           <fieldset class="feedback__contact-information">
             <legend class="feedback__user-title feedback__legend-contact">Контактная информация:</legend>
-            <div class="feedback__contact-wrapper">
-              <label class="feedback__user-label feedback__contact-phone" for="user-name">Контактный телефон*:</label>
-              <input class="feedback__user-text feedback__input-phone" type="text" name="user-phone" value="Введите телефон" id="user-phone" placeholder="Введите телефон">
-              <div class="feedback__contact-wrapper feedback__contact-wrapper--phone">
+            <div class="feedback__contact-information-wrapper">
+              <div class="feedback__contact-wrapper feedback__contact-wrapper-phone">
+                <label class="feedback__user-label feedback__contact-phone" for="user-name">Контактный телефон*:</label>
+                <label class="feedback__contact-phone-desctop" for="user-name">телефон*:</label>
+                <input class="feedback__user-text feedback__input-phone" type="text" name="user-phone" value="Введите телефон" id="user-phone" placeholder="Введите телефон">
+                <div class="feedback__contact-wrapper--phone">
+                </div>
               </div>
-            </div>
-            <div class="feedback__contact-wrapper">
-              <label class="feedback__user-label feedback__email" for="user-email">Электрронная почта*:</label>
-              <input class="feedback__user-text feedback__input-email" type="text" name="user-email" value="Введите e-mail" id="user-email" placeholder="Введите e-mail">
-              <div class="feedback__contact-wrapper feedback__contact-wrapper--mail">
+              <div class="feedback__contact-wrapper feedback__contact-wrapper-mail">
+                <label class="feedback__user-label feedback__email" for="user-email">Электронная почта*:</label>
+                <input class="feedback__user-text feedback__input-email" type="text" name="user-email" value="Введите e-mail" id="user-email" placeholder="Введите e-mail">
+                <div class="feedback__contact-wrapper--mail">
+                </div>
               </div>
             </div>
           </fieldset>
           <fieldset class="feedback__general-impression">
-            <legend class="feedback__user-title">Ваше общее впечатление:</legend>
+            <legend class="feedback__user-title feedback__general-impression-title">Ваше общее впечатление:</legend>
             <ul class="feedback__radio-list">
               <li class="feedback__radio-item">
                 <input class="feedback__radio-input" type="radio" name="positive" value="positive" id="positive"checked>
@@ -117,7 +120,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__emotions">
-            <legend class="feedback__user-title">Опишите свои эмоции:</legend>
+            <legend class="feedback__user-title feedback__comment-title">Опишите свои эмоции:</legend>
             <label class="feedback__comment-label" for="text-letter"></label>
             <textarea class="feedback__comment-textarea" name="text-letter" rows="7" id="text-letter" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>

@@ -240,7 +240,6 @@
   .photos__video {
     position: relative;
     width: 648px;
-    height: 499px;
     margin-left: 60px;
     padding-top: 16px;
     padding-bottom: 0;
@@ -313,7 +312,7 @@
   }
 
   .photos__video-icon-replay {
-    padding-left: 0px;
+    padding-left: 0;
     fill: #ffffff;
   }
 
@@ -324,7 +323,6 @@
   .photos__video-icon-fullscreen {
     fill: #ffffff;
   }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -337,7 +335,7 @@
 
   .photos__item-wrapper {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 400px;
     height: 80px;
     padding-top: 10px;
@@ -346,11 +344,8 @@
 
     &--full-width {
       width: 1200px;
+      padding-top: 4px;
     }
-  }
-
-  .photos__item-wrapper--full-width {
-    padding-top: 4px;
   }
 
   .photos__item {

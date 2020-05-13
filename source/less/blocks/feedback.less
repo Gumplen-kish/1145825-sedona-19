@@ -146,6 +146,10 @@
   margin-left: 22px;
 }
 
+.feedback__contact-phone-desctop {
+  display: none;
+}
+
 .feedback__input-phone {
   margin-top: 7px;
   padding-left: 22px;
@@ -206,6 +210,7 @@
   border-radius: 50%;
   z-index: 0;
 }
+
 .feedback__radio-input:checked + .feedback__radio-label::after {
   position: absolute;
   content: "";
@@ -263,6 +268,7 @@
   border-radius: 5px;
   background-color: @form-input;
 }
+
 .feedback__checkbox-input:checked + .feedback__checkbox-label::before {
   position: absolute;
   content: "";
@@ -277,10 +283,10 @@
   background-repeat: no-repeat;
   background-position: 50%;
 }
+
 .feedback__checkbox-input {
   display: none;
 }
-
 
 .feedback__checkbox-label {
   position: relative;
@@ -349,10 +355,8 @@
 @media (min-width: @tablet-width) {
   .feedback__fieldset-represent::after,
   .feedback__contact-information::after,
-  .feedback__general-impression::after,
   .feedback__visited-attractions::after {
-    bottom: -13px;
-    order: 0;
+    display: none;
   }
   /*Это секция интро отзыва*/
   .feedback {
@@ -392,7 +396,7 @@
   }
 
   /*Расставляем очередность*/
-   /*Блок Общее впечатление*/
+  /*Блок Общее впечатление*/
   .feedback__general-impression {
     position: relative;
     width: 50%;
@@ -438,13 +442,41 @@
   }
 
   .feedback__legend-contact {
+    position: relative;
     display: block;
-    background-color: #ffffff;
+    width: 100%;
     margin-bottom: 24px;
+    padding-left: 185px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 48%;
+      left: 525px;
+      width: 123px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 48%;
+      left: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
   }
 
   .feedback__contact-wrapper {
     margin-bottom: 11px;
+  }
+
+  .feedback__contact-phone-desctop {
+    display: none;
   }
 
   .feedback__contact-wrapper--phone {
@@ -455,40 +487,67 @@
     left: 590px;
   }
 
+  .feedback__input-email {
+    margin-bottom: 12px;
+  }
+
   /*Блок Посещенные достопримечательности*/
   .feedback__visited-attractions {
     width: 100%;
     order: 4;
   }
+
   .feedback__visited-attractions-title {
     width: 365px;
     text-align: center;
-    margin-bottom: 26px;
+    margin-bottom: 42px;
+    padding-right: 39px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 25px;
+      left: 525px;
+      width: 123px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 25px;
+      left: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
   }
 
   .feedback__attractions-list {
     display: flex;
     min-width: 600px;
     max-height: 200px;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 20px;
   }
 
   .feedback__attractions-item {
-    width: 30%;
+    width: 50%;
     margin-bottom: 63px;
+    align-items: center;
 
-    &:nth-child(2) {
-      order: 3;
+    &:nth-child(1) {
+      width: 30%;
+      margin-left: 76px;
     }
 
     &:nth-child(3) {
-      order: 2;
-    }
-
-    &:nth-child(4) {
-      order: 3;
+      width: 30%;
+      margin-left: 76px;
     }
   }
 
@@ -497,6 +556,31 @@
     margin-top: 22px;
     width: 100%;
     order: 5;
+  }
+
+  .feedback__comment-title {
+    padding-left: 198px;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 525px;
+      width: 123px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #333333;
+      opacity: 0.1;
+    }
   }
 
   .feedback__comment-textarea {
@@ -513,7 +597,7 @@
   .feedback__comment-send {
     width: 324px;
     padding-left: 12px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     order: 6;
   }
 
@@ -523,7 +607,7 @@
     height: 11px;
     margin-top: 18px;
     margin-left: 162px;
-    font-family: "PTSans", Arial, sans-serif;
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -540,4 +624,204 @@
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    padding-top: 88px;
+  }
+
+  .feedback__text {
+    padding-left: 351px;
+    padding-right: 354px;
+  }
+
+  .feedback__form {
+    min-width: 980px;
+    margin-bottom: 112px;
+    padding-top: 43px;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  /*Блок Представьтесь*/
+  .feedback__fieldset-represent {
+    padding-left: 76px;
+  }
+
+  .feedback__list-wrapper {
+    margin-right: 0;
+  }
+
+  .feedback__item {
+    width: 400px;
+  }
+
+  /*Блок Общее впечатление*/
+  .feedback__general-impression {
+    padding-left: 5px;
+  }
+
+  .feedback__radio-list {
+    margin-bottom: 17px;
+  }
+
+  .feedback__general-impression-title {
+    padding-left: 75px;
+  }
+
+  .feedback__general-impression::after {
+    left: 480px;
+  }
+
+  /*Блок Контактная информация*/
+  .feedback__contact-information {
+    margin-bottom: 31px;
+  }
+
+  .feedback__contact-information-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .feedback__contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 401px;
+
+    &-phone{
+      margin-right: 63px;
+    }
+
+    &--phone {
+      top: 7px;
+      left: 342px;
+    }
+
+    &--mail {
+      top: 8px;
+      left: 438px;
+    }
+  }
+
+  .feedback__legend-contact {
+    padding-left: 341px;
+    margin-bottom: 66px;
+
+    &::before {
+      width: 279px;
+    }
+
+    &::after {
+      left: 681px;
+      width: 279px;
+    }
+  }
+
+  .feedback__contact-phone {
+    display: none;
+  }
+
+  .feedback__contact-phone-desctop {
+    display: block;
+    padding-right: 16px;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.86;
+    text-align: left;
+    color: #333333;
+    text-transform: uppercase;
+  }
+
+  .feedback__contact-wrapper-mail {
+    min-width: 410px;
+  }
+
+  .feedback__input-email {
+    min-width: 316px;
+  }
+
+  .feedback__email {
+    min-width: 165px;
+  }
+
+  /*Блок Посещенные достопримечательности*/
+  .feedback__visited-attractions-title {
+    padding-right: 10px;
+
+    &::before {
+      width: 281px;
+    }
+
+    &::after {
+      left: 681px;
+      width: 281px;
+    }
+  }
+
+  .feedback__attractions-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-bottom: 62px;
+  }
+
+  .feedback__attractions-item {
+    width: 258px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-right: 66px;
+
+    &:nth-child(1) {
+      width: inherit;
+      margin-left: 0;
+    }
+
+    &:nth-child(3) {
+      width: inherit;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      width: 210px;
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+  }
+
+  .feedback__checkbox-label {
+    padding-left: 79px;
+  }
+
+  /*Блок Опишите свои эмоции*/
+  .feedback__comment-title {
+    padding-left: 354px;
+
+    &::before {
+      top: 11px;
+      width: 280px;
+    }
+
+    &::after {
+      top: 11px;
+      left: 681px;
+      width: 279px;
+    }
+  }
+
+  .feedback__comment-textarea {
+    width: 99%;
+  }
+
+  .feedback__comment-send {
+    width: 480px;
+    padding-left: 28px;
+  }
+
+  .feedback__emotions-info {
+    margin-left: 317px;
+  }
+
+
 }
