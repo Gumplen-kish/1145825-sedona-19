@@ -9,7 +9,7 @@
 .page-footer__tag {
   display: block;
   width: 136px;
-  padding-top: 28px;
+  padding-top: 32px;
   text-align: center;
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
@@ -31,9 +31,9 @@
 .page-footer__copyright {
   position: relative;
   display: flex;
-  width: 120px;
+  width: 135px;
   align-items: center;
-  padding-top: 47px;
+  padding-top: 35px;
 }
 
 .copyright {
@@ -45,6 +45,8 @@
   font-weight: 400;
   font-size: 14px;
   text-align: center;
+  padding-left: 3px;
+  padding-right: 5px;
 }
 
 .copyright__link-icon {
@@ -55,8 +57,8 @@
 }
 
 .copyright__link {
-  width: 27px;
-  height: 34px;
+  width: 35px;
+  height: 40px;
 
   &:hover {
     fill: @light-blue;
@@ -78,11 +80,11 @@
 
   .page-footer__tag {
     padding: 0;
-    padding-top: 20px;
   }
 
   .page-footer__social {
     padding: 0;
+    padding-top: 6px;
   }
 
   .page-footer__copyright {
@@ -93,14 +95,22 @@
   .page-footer__text {
     padding-bottom: 0;
   }
+
+  .copyright__text {
+    padding-left: 8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
     justify-content: space-around;
 
+    &--index {
+      padding-top: 80px;
+    }
+
     &--photo {
-      padding-top: 135px;
+      padding-top: 78px;
     }
   }
 
@@ -117,17 +127,21 @@
     width: 151px;
   }
 
+  .copyright__text {
+    padding-left: 0;
+    padding-top: 3px;
+  }
+
   .copyright__link {
     position: relative;
   }
 
   .copyright__link-icon {
     position: absolute;
-    top: -6px;
-    left: 6px;
+    top: 0px;
+    left: 1px;
     display: block;
     width: 35px;
     height: 40px;
-    padding-left: 1px;
   }
 }

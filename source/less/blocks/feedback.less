@@ -157,7 +157,7 @@
 }
 
 .feedback__email {
-  margin-left: 15px;
+  margin-left: 22px;
 }
 
 .feedback__input-email {
@@ -167,27 +167,30 @@
 
 .feedback__contact-wrapper {
   position: relative;
+  min-width: 280px;
 
-  &--phone {
+  &--phone::after {
     position: absolute;
+    content: "";
     top: 33px;
-    left: 223px;
+    left: 222px;
     width: 58px;
-    height: 57px;
+    height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url(../../img/icon-phone.svg);
     background-repeat: no-repeat;
     background-position: 50%;
   }
 
-  &--mail {
+  &--mail::after {
     position: absolute;
+    content: "";
     top: 33px;
-    left: 223px;
+    left: 222px;
     width: 58px;
-    height: 57px;
+    height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/icon-mail.svg");
+    background-image: url(../../img/icon-mail.svg);
     background-repeat: no-repeat;
     background-position: 50%;
   }
@@ -352,6 +355,96 @@
   display: none;
 }
 
+/*Отзыв отправлен*/
+.feedback__modal-windows-shipped--closed {
+  display: none;
+}
+
+.feedback__modal-windows-shipped {
+  position: relative;
+  display: block;
+  min-width: 320px;
+  min-height: 323px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.feedback__modal-windows-title {
+  padding-top: 49px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: black;
+}
+
+.feedback__modal-windows-text {
+  padding-bottom: 26px;
+  padding-right: 54px;
+  padding-left: 52px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+.feedback__modal-button-wrapper {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 98px;
+  background-color: #f2f2f2;
+}
+
+.feedback__modal-button {
+  .feedback__modal-button();
+}
+
+.feedback__modal-button:hover {
+  .feedback__modal-button-hover();
+}
+
+.feedback__modal-button:active {
+  .feedback__modal-button-active();
+}
+
+/*Отзыв  НЕ отправлен*/
+.feedback__modal-windows-unsent--closed {
+  display: none;
+}
+
+.feedback__modal-windows-unsent {
+  display: block;
+  min-width: 320px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.feedback__text-unsent {
+  margin-bottom: 3px;
+}
+
+.feedback__modal-unsent {
+  min-width: 180px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
 @media (min-width: @tablet-width) {
   .feedback__fieldset-represent::after,
   .feedback__contact-information::after,
@@ -475,15 +568,11 @@
     margin-bottom: 11px;
   }
 
-  .feedback__contact-phone-desctop {
-    display: none;
-  }
-
-  .feedback__contact-wrapper--phone {
+  .feedback__contact-wrapper--phone::after {
     left: 591px;
   }
 
-  .feedback__contact-wrapper--mail {
+  .feedback__contact-wrapper--mail::after {
     left: 590px;
   }
 
@@ -625,6 +714,54 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+   /*Отзыв отправлен*/
+   .feedback__modal-windows-shipped {
+    width: 640px;
+    height: 347px;
+    margin-left: 7px;
+  }
+
+  .feedback__modal-button-wrapper {
+    min-height: 146px;
+  }
+
+  .feedback__modal-shipped {
+    width: 458px;
+  }
+
+  .feedback__title-shipped {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+
+  .feedback__modal-windows-text {
+    padding-right: 114px;
+    padding-left: 112px;
+  }
+  /*Отзыв  НЕ отправлен*/
+  .feedback__modal-windows-unsent {
+    max-width: 400px;
+    max-height: 347px;
+  }
+
+  .feedback__title-unsent {
+    font-size: 30px;
+    line-height: 1.33;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .feedback__text-unsent {
+    padding-right: 62px;
+    padding-left: 61px;
+  }
+
+  .feedback__modal-unsent {
+    width: 272px;
+    margin-bottom: 60px;
+    margin-left: 64px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -639,7 +776,7 @@
 
   .feedback__form {
     min-width: 980px;
-    margin-bottom: 112px;
+    margin-bottom: 110px;
     padding-top: 43px;
     padding-right: 0;
     padding-left: 10px;
@@ -690,20 +827,6 @@
     flex-direction: row;
     align-items: center;
     min-width: 401px;
-
-    &-phone {
-      margin-right: 63px;
-    }
-
-    &--phone {
-      top: 7px;
-      left: 342px;
-    }
-
-    &--mail {
-      top: 8px;
-      left: 438px;
-    }
   }
 
   .feedback__legend-contact {
@@ -721,31 +844,37 @@
   }
 
   .feedback__contact-phone {
-    display: none;
+    margin-left: 0;
+    margin-right: 15px;
   }
 
-  .feedback__contact-phone-desctop {
-    display: block;
-    padding-right: 16px;
-    font-family: "PTSans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 1.86;
-    text-align: left;
-    color: #333333;
-    text-transform: uppercase;
-  }
+  .feedback__contact-wrapper {
 
-  .feedback__contact-wrapper-mail {
-    min-width: 410px;
-  }
+    &--phone::after {
+      left: 343px;
+      top: 8px;
+    }
 
-  .feedback__input-email {
-    min-width: 316px;
+    &--mail::after {
+      left: 501px;
+      top: 8px;
+    }
   }
 
   .feedback__email {
-    min-width: 165px;
+    margin-left: 78px;
+    width: 260px;
   }
+
+  .feedback__input-email {
+    width: 87%;
+  }
+
+  .feedback__contact-phone-span {
+    display: none;
+  }
+
+
 
   /*Блок Посещенные достопримечательности*/
   .feedback__visited-attractions-title {
