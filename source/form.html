@@ -66,18 +66,13 @@
           <fieldset class="feedback__contact-information">
             <legend class="feedback__user-title feedback__legend-contact">Контактная информация:</legend>
             <div class="feedback__contact-information-wrapper">
-              <div class="feedback__contact-wrapper feedback__contact-wrapper-phone">
-                <label class="feedback__user-label feedback__contact-phone" for="user-name">Контактный телефон*:</label>
-                <label class="feedback__contact-phone-desctop" for="user-name">телефон*:</label>
+              <div class="feedback__contact-wrapper feedback__contact-wrapper--phone">
+                <label class="feedback__user-label feedback__contact-phone" for="user-name"><span class="feedback__contact-phone-span">Контактный</span> телефон*:</label>
                 <input class="feedback__user-text feedback__input-phone" type="text" name="user-phone" value="Введите телефон" id="user-phone" placeholder="Введите телефон">
-                <div class="feedback__contact-wrapper--phone">
-                </div>
               </div>
-              <div class="feedback__contact-wrapper feedback__contact-wrapper-mail">
+              <div class="feedback__contact-wrapper feedback__contact-wrapper--mail">
                 <label class="feedback__user-label feedback__email" for="user-email">Электронная почта*:</label>
                 <input class="feedback__user-text feedback__input-email" type="text" name="user-email" value="Введите e-mail" id="user-email" placeholder="Введите e-mail">
-                <div class="feedback__contact-wrapper--mail">
-                </div>
               </div>
             </div>
           </fieldset>
@@ -131,7 +126,7 @@
         <section class="feedback__modal-windows">
           <h3 class="visually-hidden"> Модальные окна</h3>
           <!--Отзыв отправлен!-->
-          <div class="feedback__modal-windows-shipped--opened feedback__modal-windows-shipped--closed">
+          <div class="feedback__modal-windows-shipped--closed">
             <h4 class="feedback__modal-windows-title feedback__title-shipped">Ваш отзыв отправлен!</h4>
             <p class="feedback__modal-windows-text feedback__text-shipped">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
             <div class="feedback__modal-button-wrapper">
@@ -139,10 +134,10 @@
             </div>
           </div>
           <!--Что-то пошло не так!-->
-          <div class="feedback__modal-windows-unsent--closed feedback__modal-windows-unsent--opened ">
+          <div class="feedback__modal-windows-unsent--closed ">
             <h4 class="feedback__modal-windows-title feedback__title-unsent">Что-то пошло не так!</h4>
             <p class="feedback__modal-windows-text feedback__text-unsent">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button class="feedback__modal-button feedback__modal-unsent" type="button" >Ок</button>
+            <button class="feedback__modal-button feedback__modal-unsent" type="button">Ок</button>
           </div>
         </section>
       </section>
