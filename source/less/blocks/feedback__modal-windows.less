@@ -1,0 +1,139 @@
+/*Отзыв отправлен*/
+.feedback__modal-windows-shipped--closed {
+  display: none;
+}
+
+.feedback__modal-windows-shipped--opened {
+  position: relative;
+  display: block;
+  min-width: 320px;
+  min-height: 323px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.feedback__modal-windows-title {
+  padding-top: 49px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: black;
+}
+
+.feedback__modal-windows-text {
+  padding-bottom: 26px;
+  padding-right: 54px;
+  padding-left: 52px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+.feedback__modal-button-wrapper {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 98px;
+  background-color: #f2f2f2;
+}
+
+.feedback__modal-button {
+  .feedback__modal-button()
+}
+
+.feedback__modal-button:hover {
+  .feedback__modal-button-hover()
+}
+
+.feedback__modal-button:active {
+  .feedback__modal-button-active()
+}
+
+/*Отзыв  НЕ отправлен*/
+.feedback__modal-windows-unsent--closed {
+  display: none;
+}
+
+.feedback__modal-windows-unsent--opened {
+  display: block;
+  min-width: 320px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.feedback__text-unsent {
+  margin-bottom: 3px;
+}
+
+.feedback__modal-unsent {
+  min-width: 180px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+@media (min-width: @tablet-width) {
+  /*Отзыв отправлен*/
+  .feedback__modal-windows-shipped--opened {
+    width: 640px;
+    height: 347px;
+    margin-left: 7px;
+  }
+
+  .feedback__modal-button-wrapper {
+    min-height: 146px;
+  }
+
+  .feedback__modal-shipped {
+    width: 458px;
+  }
+
+  .feedback__title-shipped {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+
+  .feedback__modal-windows-text {
+    padding-right: 114px;
+    padding-left: 112px;
+  }
+  /*Отзыв  НЕ отправлен*/
+  .feedback__modal-windows-unsent--opened {
+    max-width: 400px;
+    max-height: 347px;
+  }
+
+  .feedback__title-unsent {
+    font-size: 30px;
+    line-height: 1.33;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .feedback__text-unsent {
+    padding-right: 62px;
+    padding-left: 61px;
+  }
+
+  .feedback__modal-unsent {
+    width: 272px;
+    margin-bottom: 60px;
+    margin-left: 64px;
+  }
+}
