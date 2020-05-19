@@ -107,6 +107,15 @@
   border-style: none;
   outline: none;
   color: #000000;
+
+  &:hover {
+    background-color: @form-input-hover;
+  }
+
+  &:active {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 /*Здесь стили выравнивания*/
@@ -212,6 +221,14 @@
   background-color: #f2f2f2;
   border-radius: 50%;
   z-index: 0;
+
+  &:hover {
+    background-color: @form-input-hover;
+  }
+
+  &:active {
+    background-color: @form-input-active;
+  }
 }
 
 .feedback__radio-input:checked + .feedback__radio-label::after {
@@ -224,6 +241,15 @@
   background-color: #333333;
   border-radius: 50%;
   z-index: 1;
+
+  &:hover {
+    background-color: @form-input-hover;
+  }
+
+  &:active {
+    background-color: #333333;
+    opacity: 0.3;
+  }
 }
 
 .feedback__radio-input {
@@ -270,6 +296,14 @@
   border: solid 5px @form-input;
   border-radius: 5px;
   background-color: @form-input;
+
+  &:hover {
+    background-color: @form-input-hover;
+  }
+
+  &:active {
+    background-color: @form-input-active;
+  }
 }
 
 .feedback__checkbox-input:checked + .feedback__checkbox-label::before {
@@ -285,6 +319,15 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 50%;
+
+  &:hover {
+    background-color: @form-input-hover;
+  }
+
+  &:active {
+    background-color: #333333;
+    opacity: 0.3;
+  }
 }
 
 .feedback__checkbox-input {
@@ -349,6 +392,14 @@
   border-style: none;
   cursor: pointer;
   color: #ffffff;
+
+  &:hover {
+    background-color: @light-blue-hover;
+  }
+
+  &:active {
+    background-color: @light-blue-active;
+  }
 }
 
 .feedback__emotions-info {
