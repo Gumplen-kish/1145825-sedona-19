@@ -1,12 +1,12 @@
 .DS_Store
 .idea
 .vscode
-build/
 *.ai
 *.log
 *.pdf
 *.psd
 *.sublime*
+build/
 node_modules/
 npm-debug.*
 Thumbs.db
