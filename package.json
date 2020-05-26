@@ -48,8 +48,12 @@
   },
   "dependencies": {
     "del": "^5.1.0",
+    "download": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "https": "^1.0.0",
     "imagemin-svgo": "^7.1.0",
-    "readable-stream": "^3.6.0"
+    "node-pre-gyp": "^0.14.0",
+    "readable-stream": "^3.6.0",
+    "svg4everybody": "^2.1.9"
   }
 }
